@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var db = require('monk')('localhost:27017/hatchways-back-end')
+var db = require('monk')('mongodb://heroku_njl3vk5s:656bv2kb88djjuuog820tagi3h@ds255107.mlab.com:55107/heroku_njl3vk5s')
 var app = express();
 
 db.then(() => {
