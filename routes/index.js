@@ -33,7 +33,7 @@ router.post('/work_order', function(req, res, next) {
 });
 
 /* Fetch all Workers */
-router.get('/work_orders', function(req, res, next) {
+router.get('/workers', function(req, res, next) {
   var db = req.db;
   var workerCollection = db.get('workerCollection');
 
