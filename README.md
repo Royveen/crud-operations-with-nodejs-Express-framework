@@ -22,6 +22,7 @@ Follow the instructions to run the app :
 2. run `npm install` to install all dependencies.
 3. run `npm start` to run the application in browser.
 4. the browser URL will be `http://localhost:3000/work_orders`
+5. All APIs are written in `routes/index.js` and `app.js` folder.
 
 Following are the APIs designed in this app:
 
