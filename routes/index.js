@@ -32,6 +32,19 @@ router.post('/work_order', function(req, res, next) {
   })
 });
 
+/* Fetch all Workers */
+router.get('/work_orders', function(req, res, next) {
+  var db = req.db;
+  var workerCollection = db.get('workerCollection');
+
+  workerCollection.find({}).then((data,err) => {
+    if(err)
+      return 'Error Encountered while fetching data'
+
+    res.send(data);
+  })
+});
+
 /* create a Worker */
 router.post('/worker', function(req, res, next) {
   var db = req.db;
@@ -56,7 +69,7 @@ router.delete('/worker/:id', function(req, res, next) {
     if(err)
       return 'Error Encountered while removing worker data';
 
-    res.send({ message: "Worker inserted successfully", data: workerData});
+    res.send({ message: "Worker Deleted successfully", data: workerData});
   })
 });
 
