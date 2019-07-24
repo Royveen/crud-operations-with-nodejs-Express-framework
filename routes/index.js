@@ -49,7 +49,7 @@ router.post('/worker', function(req, res, next) {
 /* Delete a Worker */
 router.delete('/worker/:id', function(req, res, next) {
   var db = req.db;
-  var workerDetailId = req.param(id);
+  var workerDetailId = req.param('id');
   var workerCollection = db.get('workerCollection');
 
   workerCollection.remove({_id: workerDetailId}).then((workerData,err) => {
